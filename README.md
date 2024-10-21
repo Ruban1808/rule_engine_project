@@ -37,12 +37,14 @@ Develop a simple 3-tier rule engine application with a Simple UI, API, and Backe
 
 2. **Set Up Virtual Environment** (Optional)
 
+   ```bash
    python -m venv myenv
    source myenv/bin/activate  # For macOS/Linux
    myenv\Scripts\activate  # For Windows
 
 3. **Install Required Packages**
 
+   ```bash
    pip install -r requirements.txt
 
 **Project Structure**
@@ -62,7 +64,7 @@ rule_engine_project/
 
 **Running the Application**
    Start the Flask server with the command:
-
+   
    python app.py
 
 The server will run at http://127.0.0.1:5000/.
@@ -72,40 +74,41 @@ The server will run at http://127.0.0.1:5000/.
 
   - POST /create_rule
   - Request Body :
-
+    ```bash
      {
     "rules": [
         "((age > 30 and department == 'Sales') or (age < 25 and department == 'Marketing')) and (salary > 50000 or experience > 5)",
         "((age > 30 and department == 'Marketing')) and (salary > 20000 or experience > 5)"
     ]
-   }
+    }
 
  2.Combine Rules
 
   - POST /combine_rules
   - Request Body :
-     
+      ```bash
      {
     "rules": [
         "((age > 30 and department == 'Sales') or (age < 25 and department == 'Marketing')) and (salary > 50000 or experience > 5)",
         "((age > 30 and department == 'Marketing')) and (salary > 20000 or experience > 5)"
     ]
-   }
+    }
 
  3.Evaluate Rule
 
    - POST /evaluate
    - Request Body :
- 
+      ```bash
      {
     "rule": "((age > 30 and department == 'Sales') and (salary > 50000 and experience > 2))"
-   }
+    }
 
  4.Update a Rule
 
   - PUT /update_rule/<rule_id>
   - Request Body :
 
+     ```bash
      {
     "rule": "((age > 40 and department == 'Sales') or (age < 30 and department == 'Marketing'))"
     }
