@@ -60,7 +60,9 @@ rule_engine_project/
 **Initializing the Database**
    Run the following command to initialize the SQLite database:
 
+   
    python -c "from models import init_db; init_db()"
+
 
 **Running the Application**
    Start the Flask server with the command:
