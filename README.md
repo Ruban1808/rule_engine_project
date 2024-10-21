@@ -32,7 +32,7 @@ Develop a simple 3-tier rule engine application with a Simple UI, API, and Backe
 1. **Clone the Repository**
 
    ```bash
-   git clone <repository-url>
+   git clone <https://github.com/Ruban1808/rule_engine_project.git>
    cd rule_engine_project
    ```
 
