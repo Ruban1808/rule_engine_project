@@ -61,18 +61,20 @@ rule_engine_project/
    Run the following command to initialize the SQLite database:
 
    
-   python -c "from models import init_db; init_db()"
+   **python -c "from models import init_db; init_db()"**
 
 
 **Running the Application**
    Start the Flask server with the command:
+
    
-   python app.py
+   **python app.py**
+
 
 The server will run at http://127.0.0.1:5000/.
 
 **API Endpoints**
- 1.Create a Rule
+ ***1.Create a Rule***
 
   - POST /create_rule
   - Request Body :
@@ -84,7 +86,7 @@ The server will run at http://127.0.0.1:5000/.
     ]
     }
 
- 2.Combine Rules
+ ***2.Combine Rules***
 
   - POST /combine_rules
   - Request Body :
@@ -96,7 +98,7 @@ The server will run at http://127.0.0.1:5000/.
     ]
     }
 
- 3.Evaluate Rule
+ ***3.Evaluate Rule***
 
    - POST /evaluate
    - Request Body :
@@ -105,7 +107,7 @@ The server will run at http://127.0.0.1:5000/.
     "rule": "((age > 30 and department == 'Sales') and (salary > 50000 and experience > 2))"
     }
 
- 4.Update a Rule
+ ***4.Update a Rule***
 
   - PUT /update_rule/<rule_id>
   - Request Body :
